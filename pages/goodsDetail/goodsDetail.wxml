@@ -1,0 +1,62 @@
+<!--pages/goods/goodsDetail.wxml-->
+<view class='goods-detail-wrapper'>
+  <swiper class='goods-detail-swiper' indicator-dots="true" indicator-color="#333" indicator-active-color="#f3c267" circular="true">
+    <block wx:for="{{goods.detail.swiperimg}}" wx:key="{{index}}">
+      <swiper-item class='goods-bg' style='background-image:url({{item}})' data-urls="{{goods.detail.swiperimg}}" data-currentUrl="{{item}}" bindtap="previewImages">
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='goods-price-bar'>
+    <view class='price-bar'>
+      <text class='activity-word'>活动价</text>
+      <text class='current-price'><text class='icon'>￥</text>{{goods.detail.currentPrice}}</text>
+      <text class='original-price'>￥{{goods.detail.originalPrice}}</text>
+    </view>
+    <view class='endtime'>
+      <text class='words'>距结束</text>
+      <text class='time'>{{countDownTime}}</text>
+      <image src='../../images/icon/endtime.png'></image>
+    </view>
+  </view>
+  <view class='goods-info-head'>
+    <view class='main'>
+      <view class='left'>
+        <view class='tit text-overflow-two-line'>
+          <text class='expresstype' wx:if="goods.shippingFree">包邮包税</text>
+          <text class='tit-words'>{{goods.title}}</text>
+        </view>
+        <view class='des'>{{goods.des}}</view>
+      </view>
+      <view class='right'>
+        <view class="icon" style='background-image:url(../../images/icon/redfly.png)'></view>
+        <view class='share-text'>分享赚钱</view>
+      </view>
+    </view>
+    <view class='get-price'>
+      <text class='tit-words'>赚</text>
+      <text class='price'><text class='icon'>￥</text>{{goods.gain}}</text>
+    </view>
+    <view class='service-bar'>
+      <view><image src='../../images/icon/zhengpin.png'></image>正品保证</view>
+      <view><image src='../../images/icon/free.png'></image>一件包邮</view>
+      <view><image src='../../images/icon/fahuo.png'></image>48小时发货</view>
+      <view><image src='../../images/icon/smileface.png'></image>售后无忧</view>
+    </view>
+  </view>
+  <view class='userinfo'>
+    <view class='userphoto' style='background-image:url({{userInfo.avatarUrl}})'></view>
+    <view class='nick-name'>{{userInfo.nickName}}的小店铺</view>
+    <view class='to-shop'>进店铺逛逛 ></view>
+  </view>
+  <view class='goods-detail-bar'>
+    <view class='tit'>商品详情</view>
+    <view class='notice'>
+      <view class='tit'>跨境购注意事项</view>
+      <view class='text'>下单后该商品将从海外国家或者港澳台发出，且由第三方物流公司提供相应物流信息，物流时间问题，不同国家都有所不同，一般发货后7-30天内可以到达，犹豫跨境购物的性质，除发错货或者是商品质量问题，不支持其他情况的无理由退换货，商品签收7天内不在接受无理由退换货</view>
+    </view>
+    <view class='detail'>
+      <image data-urls="{{goods.detail.detailimg}}" data-currentUrl="{{item}}" bindtap="previewImages" class="img" mode="widthFix" wx:for="{{goods.detail.detailimg}}" wx:key="{{index}}" src='{{item}}'></image>
+      <!-- <view class="img" wx:for="{{goods.detail.detailimg}}" wx:key="{{index}}" style='background-image:url({{item}})'></view> -->
+    </view>
+  </view>
+</view>

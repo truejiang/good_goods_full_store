@@ -1,0 +1,22 @@
+<!--pages/recommed/publish/publish.wxml-->
+<view class='publish-wrapper'>
+  <view class='goods-info'>
+    <text class='goods-image' style='background-image:url({{goods.imgUrl}})'></text>
+    <view class='goods-info-panel'>
+      <view class='title text-overflow-two-line'>{{goods.title}}</view>
+      <view class='price'><text class='icon'>￥</text>{{goods.price}}</view>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='head'>
+      <text class='icon-bar'></text>
+      <text class='words'>推荐语：</text>
+    </view>
+    <view>
+      <form class='publishform' bindsubmit='publishCommed'>
+        <textarea placeholder="输入推荐语，更容易给店铺带来销售噢（限200字）" placeholder-style="color:#ddd" adjust-position	="false"></textarea>
+        <button class="publishbtn" form-type='submit'>确认发布</button>
+      </form>
+    </view>
+  </view>
+</view>

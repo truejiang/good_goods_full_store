@@ -1,0 +1,81 @@
+/* pages/recommed/publish/publish.wxss */
+@import '../../../style/style.wxss';
+
+.publish-wrapper{
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+}
+.goods-info {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx 40rpx;
+  background-color: #f9f6f6;
+}
+.goods-info .goods-image {
+  flex: 0 0 100rpx;
+  height: 100rpx;
+  width: 100rpx;
+  background-size: 100rpx 100rpx;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.goods-info .goods-info-panel {
+  flex: 1;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.goods-info .goods-info-panel .title {
+  font-weight: 700;
+  color: #333;
+}
+.goods-info .goods-info-panel .price {
+  color: red;
+  margin-top: 10rpx;  
+}
+.goods-info .goods-info-panel .price .icon {
+  margin-right: 12rpx;
+  font-size: 20rpx;
+}
+.main {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.main .head {
+  display: flex;
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.main .head .icon-bar{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 24rpx;
+  background-color: rgba(253, 196, 122, 0.2);
+  background-size: 20rpx 20rpx;
+  background-image: url('http://oqk0uz684.bkt.clouddn.com/recommed-icon.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+}
+
+.main .publishform {
+  display: flex;
+  flex-direction: column;
+}
+.main textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 20rpx;
+  flex: 1;
+}
+.main .publishbtn {
+  padding: 0;
+  background-color: rgb(208, 156, 89);
+  color: #fff;
+  border-radius: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width:100%;
+}

@@ -1,0 +1,17 @@
+<!--pages/recommed/recommed.wxml-->
+<view class='recommed-wrapper'>
+  <view class='header'>
+    <view class='top-setting-bar'>
+      <view class='edit'><image src='../../images/icon/edit-1.png'></image>编辑封面</view>
+      <view class='share'><image src='../../images/icon/reommed-share-icon.png'></image>分享店铺</view>
+    </view>
+    <view class='raduis-bar'></view>
+    <view class='user-info'>
+      <view class='user-photo' style='background-image:url({{userInfo.avatarUrl}})'><text class='photo-edit'>编辑</text></view>
+      <view class='info-panel'>
+        <view class='name'>{{userInfo.nickName}}<image src='../../images/icon/edit-2.png'></image></view>
+        <view class='dynamic'></view>       
+      </view>
+    </view>
+  </view>
+</view>

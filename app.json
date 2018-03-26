@@ -1,0 +1,31 @@
+{
+  "pages": [
+    "pages/recommed/recommed",    
+    "pages/index/index",
+    "pages/searchpage/searchpage",
+    "pages/recommed/publish/publish",
+    "pages/goodsDetail/goodsDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "全部好物",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "全部好物",
+        "iconPath": "./images/bar-title-icon/goodsfull-un.png",
+        "selectedIconPath": "./images/bar-title-icon/goodsfull-ed.png"
+      },
+      {
+        "pagePath": "pages/recommed/recommed",
+        "text": "店主推荐",
+        "iconPath": "./images/bar-title-icon/recommend-un.png",
+        "selectedIconPath": "./images/bar-title-icon/recommend-ed.png"
+      }
+    ]
+  }
+}

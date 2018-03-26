@@ -1,0 +1,202 @@
+/* pages/goods/goodsDetail.wxss */
+@import '../../style/style.wxss';
+
+.goods-detail-wrapper {
+  width: 100%;
+  height: 100%;
+}
+.goods-detail-wrapper .goods-detail-swiper {
+  height: 700rpx;
+}
+.goods-detail-wrapper .goods-bg {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+/* 商品价格和倒计时 */ 
+.goods-price-bar {
+  background-color: #f23030;
+  padding: 24rpx 20rpx;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.goods-price-bar .price-bar .activity-word {
+  color: #f23030;
+  background-color: #fff;
+  padding: 0 10rpx;
+  font-size: 20rpx;
+  margin-right: 12rpx;
+}
+.goods-price-bar .price-bar .current-price {
+  font-size: 28rpx;
+  font-weight: 700;
+  margin-right: 12rpx;
+}
+.goods-price-bar .price-bar .current-price .icon {
+  font-size: 20rpx;
+}
+.goods-price-bar .price-bar .original-price {
+  font-size: 20rpx;
+  opacity: 0.8;
+  text-decoration: line-through;
+}
+.goods-price-bar .endtime image {
+  width: 40rpx;
+  height: 40rpx;
+  vertical-align: -12rpx;
+}
+.goods-price-bar .endtime .words {
+  margin-right: 8rpx;
+}
+/* 商品标题等信息栏 */
+.goods-info-head {
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.goods-info-head .main {
+  display: flex;
+}
+.goods-info-head .main .left {
+  flex: 1;
+}
+.goods-info-head .main .left .tit {
+  line-height: 1.8;
+  margin-bottom: 20rpx;
+}
+.goods-info-head .main .left .expresstype {
+  color: #f23030;
+  border: 1px solid #f23030;
+  padding: 0 10rpx;
+  border-radius: 6rpx;
+  font-size: 20rpx;
+  margin-right: 16rpx;
+}
+.goods-info-head .main .left .tit-words {
+  font-size: 26rpx;
+  font-weight: 700;
+  color: #333;
+}
+.goods-info-head .main .right{
+  flex: 0 0 150rpx;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #f23030;
+}
+.goods-info-head .main .right .icon {
+  width: 80rpx;
+  height: 80rpx;
+  margin: auto;  
+  margin-bottom: 10rpx;
+  background-position: 40% 50%;
+  background-size: 52rpx 52rpx;
+  border-radius: 50%;
+  border: 1px solid #f23030;
+  background-repeat: no-repeat;
+}
+
+.goods-info-head  .get-price {
+  color: #f23030;
+  padding: 20rpx 0;
+  padding-left: 40rpx;
+  font-size: 20rpx;  
+}
+.goods-info-head  .get-price .tit-words {
+  margin-right: 12rpx;
+}
+.goods-info-head  .get-price .icon {
+  font-weight: normal;
+  font-size: 20rpx;
+}
+.goods-info-head  .get-price .price {
+  font-size: 26rpx;
+  font-weight: 700;
+}
+.goods-info-head .service-bar {
+  display: flex;
+  justify-content: space-around;
+  font-size: 22rpx;
+}
+.goods-info-head .service-bar image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 12rpx;
+  vertical-align:-6rpx;
+}
+/* 用户信息面板 */
+.userinfo {
+  width: calc(100% - 40rpx);
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin: 20rpx auto;
+  margin-top: 60rpx;
+  background-color: #fff;
+  border-radius: 12rpx;
+  position: relative;
+  text-align: center;
+}
+.userinfo .userphoto {
+  position: absolute;
+  width: 72rpx;
+  height: 72rpx;
+  border: 2px solid #fff;
+  top: -36rpx;
+  left: calc(50% - 36rpx);
+  border-radius: 50%;
+  background-position: center center;
+  background-size: 72rpx 72rpx;
+  background-repeat: no-repeat;
+}
+
+.userinfo .nick-name {
+  padding:30rpx 0;
+  font-size:26rpx;
+  color:#333;
+}
+.userinfo .to-shop {
+  display: inline-block;
+  padding: 14rpx 30rpx;
+  background-color: #d28d2b;
+  border-radius: 40rpx;
+  color: #fff;
+  font-size: 26rpx;
+}
+/* 商品详情部分 */
+.goods-detail-bar {
+  background-color: #fff;
+}
+.goods-detail-bar .tit{
+  box-sizing: border-box;
+  padding: 20rpx;
+  padding-bottom: 20rpx;
+}
+.goods-detail-bar .notice {
+  box-sizing: border-box;
+  padding: 20rpx;
+  border-top: 8rpx solid #eee;
+  border-bottom: 8rpx solid #eee;
+  background: linear-gradient(-45deg, #eee 25%, #f5f5f5 0,#f5f5f5 50%,#eee 0%,#eee 75%,#f5f5f5 0);
+  background-size: 50rpx 50rpx;
+}
+.goods-detail-bar .notice .tit {
+  font-size: 28rpx;
+  font-weight: 700;
+  padding-bottom: 20rpx;
+  text-align: center;
+  color: #333;
+}
+.goods-detail-bar .notice .text {
+  line-height: 1.7;
+}
+.detail {
+  width: 100%;
+}
+.detail .img {
+  width: 100%;
+}

@@ -1,0 +1,11 @@
+<!--pages/searchpage/searchpage.wxml-->
+<view class='search-wrapper'>
+  <view class='searchbox'>
+    <input class='searchinput' placeholder="搜索商品名或品牌" bindfocus="searchGoods"></input>
+    <image class='searchicon' src='../../images/icon/search.png'></image>
+    <view class='menu-btn'>
+      <text class='cancel' wx:if="{{searchFlag}}" bindtap='cancel'>取消</text>
+      <text class='search' wx:else>搜索</text>
+    </view>
+  </view>
+</view>

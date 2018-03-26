@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class='index-wrapper'>
+  <scroll-view>
+    <view class='searchbox'>
+      <input class='searchinput' placeholder="搜索商品名或品牌" bindfocus="toSearchPage"></input>
+      <image class='searchicon' src='../../images/icon/search.png'></image>
+      <view class='menu-btn'>
+        <image src='../../images/icon/menu.png'></image>
+      </view>
+    </view>
+    <swiper class='swiper-wrapper' indicator-dots="true" autoplay="true" circular="true">
+      <block wx:for="{{swiperList}}" wx:key="{{item.id}}">
+        <swiper-item>
+          <view class="item" style="background-image:url({{item.imgUrl}})" bindtap='toPage' data-id="{{item.id}}"></view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </scroll-view>
+  <view class='nav'>
+    <view class='nav-item'>
+      <image src='../../images/icon/cosmetics.png'></image>
+      <text class='item-tit'>美妆个护</text>
+    </view>
+    <view class='nav-item'>
+      <image src='../../images/icon/fruit.png'></image>
+      <text class='item-tit'>食品生鲜</text>
+    </view>
+    <view class='nav-item'>
+      <image src='../../images/icon/furniture.png'></image>
+      <text class='item-tit'>居家生活</text>
+    </view>
+    <view class='nav-item'>
+      <image src='../../images/icon/infant&mom.png'></image>
+      <text class='item-tit'>母婴玩具</text>
+    </view>
+  </view>
+  <scroll-view class='goods-time-line' scroll-x="true" scroll-with-animation="true">
+    <view class='item {{item.actived === true ? "actived" : ""}} {{item.isOvertime === true ? "overtime" : ""}}' wx:for="{{goodsTimeLineDatas}}" wx:for-index="idx" data-time='{{item.time}}' data-tp="{{item.tp}}" bindtap='checkTimeLineIsActive'>
+      <text class='time'>{{item.time}}</text>
+      <text class='tit' wx:if="{{ !item.isOvertime && item.flag !== -1}}">预热中</text>
+      <text class='tit' wx:elif="{{item.isOvertime && item.flag !== -1}}">抢购中</text>      
+      <text class='tit' wx:elif="{{item.flag === -1}}">热卖</text>
+    </view>
+  </scroll-view>
+  <view class='goods-list-wrapper'>
+    <view class='goods-list-item' wx:for="{{goodslist}}" wx:for-item="goods" data-goods="{{goods}}" catchtap='toGoodsDetail'>
+      <view class='goods-info'>
+        <view class='goodsimg' style='background-image:url({{goods.imgUrl}})'></view>
+        <view class='info-panel'>
+          <view class='info-wrapper'>
+            <view class='title text-overflow-two-line'><text class='expresstype'>包邮</text>{{goods.title}}</view>
+            <view class='des text-overflow-two-line'>{{goods.des || '暂无商品描述'}}</view>
+            <view class='price-bar'>
+              <text class='price'><text class='icon'>￥</text>{{goods.price}}</text>
+              <text class='line'>|</text>
+              <text class='price'><text class='icon'>赚 ￥</text>{{goods.gain}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class='goods-tool-bar'>
+        <text class='brand'>{{goods.brand}}</text>
+        <view class='liek-share'>
+          <image class="icon" src='../../images/icon/like.png' data-goods="{{goods}}" catchtap='toRecommedPublish'></image>
+          <image class="icon" src='../../images/icon/share.png'></image>
+        </view>
+      </view>
+    </view>  
+  </view>
+</view>
