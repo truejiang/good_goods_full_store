@@ -26,11 +26,18 @@ const defaultShareTitle = {
 const defaultBarTitle = {
   title: '陈升宝'
 }
-
+/**
+ * 默认的用户介绍信息
+ * @type {string}
+ */
+const defaultShopWelcomeMsg = {
+  msg: '我的小店开业啦！都是好货，开始剁手吧！'
+}
 let core = {
   defaultAlterMessage: defaultAlterMessage,
   defaultShareTitle: defaultShareTitle['title'],
-  defaultBarTitle: defaultBarTitle['title']
+  defaultBarTitle: defaultBarTitle['title'],
+  defaultShopWelcomeMsg: defaultShopWelcomeMsg['msg']
 }
 
 export default core

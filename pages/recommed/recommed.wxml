@@ -10,7 +10,42 @@
       <view class='user-photo' style='background-image:url({{userInfo.avatarUrl}})'><text class='photo-edit'>编辑</text></view>
       <view class='info-panel'>
         <view class='name'>{{userInfo.nickName}}<image src='../../images/icon/edit-2.png'></image></view>
-        <view class='dynamic'></view>       
+        <view class='dynamic'>动态 <text class='num'>1</text></view>
+        <view class='welcome'>{{defaultShopWelcomeMsg}}</view>     
+      </view>
+    </view>
+  </view>
+  <view class='record-bar'>
+    <view class='top'>
+       <text class='record-pp'>{{viewRecord.length}}位</text><text>好友已浏览过店铺</text> 
+    </view>
+    <view class='bottom'>
+       <image wx:for="{{viewRecord}}" src='{{item.avatarUrl}}'></image> 
+    </view>
+  </view>
+  <view class='day-record-wrapper'>
+    <view class='title'><image src='../../images/icon/lightning-b-闪电.png'></image>我的日常</view>
+    <view class='record-list' wx:for="{{recommedGoodsList}}">
+      <view class='user-info-wrapper'>
+        <text class='user-photo' style='background-image:url({{userInfo.avatarUrl}})'></text>
+        <image class='icon' src='../../images/icon/recommed-icon.png'></image>
+        <text>店主极力推荐了该商品</text>
+      </view>
+      <view class='recommend-word'>{{item.recommendWord}}</view>
+      <view class='recommed-goods'>
+        <view class='img' style='background-image:url({{item.imgUrl}})'></view>
+        <view class='goods-info'>
+          <view class='tit .text-overflow-two-line'>{{item.title}}</view>
+          <view class='price'><text class='icon'>￥</text>{{item.price}}</view>
+        </view>
+      </view>
+      <view class='like-bar'>
+        <view class='like-list' wx:for="{{}}">
+        </view>
+        <view class='like-btn'>
+          <image class='icon' src='../../images/icon/unlike.png' wx:if="item.isLike === 0"></image>
+          <image class='icon' src='../../images/icon/liked.png' wx:else></image>
+        </view>
       </view>
     </view>
   </view>
